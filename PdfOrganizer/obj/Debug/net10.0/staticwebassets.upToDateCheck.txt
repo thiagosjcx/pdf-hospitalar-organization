@@ -1,0 +1,6 @@
+wwwroot\index.html
+wwwroot\script.js
+wwwroot\style.css
+C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\wwwroot\index.html
+C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\wwwroot\script.js
+C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\wwwroot\style.css

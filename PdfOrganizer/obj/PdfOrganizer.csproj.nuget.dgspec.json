@@ -54,9 +54,17 @@
               "target": "Package",
               "version": "[10.0.2, )"
             },
+            "PdfPig": {
+              "target": "Package",
+              "version": "[0.1.14, )"
+            },
             "QuestPDF": {
               "target": "Package",
               "version": "[2026.5.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[10.1.7, )"
             }
           },
           "imports": [
