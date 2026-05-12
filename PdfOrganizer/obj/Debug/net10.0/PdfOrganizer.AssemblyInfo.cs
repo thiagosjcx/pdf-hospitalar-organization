@@ -11,10 +11,13 @@
 using System;
 using System.Reflection;
 
+[assembly: AspNetCore.SassCompiler.SassCompilerAttribute("C:\\Users\\Pc\\.nuget\\packages\\aspnetcore.sasscompiler\\1.99.0\\build\\..\\runtimes\\win-" +
+    "x64\\src\\dart.exe", "C:\\Users\\Pc\\.nuget\\packages\\aspnetcore.sasscompiler\\1.99.0\\build\\..\\runtimes\\win-" +
+    "x64\\src\\sass.snapshot")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PdfOrganizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40d5a782f42d5221b981460e76807b25191a6547")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f4948338ca22f656f44221207d34378bb67fe94")]
 [assembly: System.Reflection.AssemblyProductAttribute("PdfOrganizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PdfOrganizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

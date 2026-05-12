@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BPeJdftXuA0=",
+  "dgSpecHash": "BZIa7FoGGGc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Pc\\Documents\\repos\\PDF organization\\PDF-organization\\PdfOrganizer\\PdfOrganizer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Pc\\.nuget\\packages\\aspnetcore.sasscompiler\\1.99.0\\aspnetcore.sasscompiler.1.99.0.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\microsoft.aspnetcore.openapi.10.0.2.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
     "C:\\Users\\Pc\\.nuget\\packages\\microsoft.openapi\\2.4.1\\microsoft.openapi.2.4.1.nupkg.sha512",

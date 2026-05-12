@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "PdfOrganizer/1.0.0": {
         "dependencies": {
+          "AspNetCore.SassCompiler": "1.99.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.2",
           "PdfPig": "0.1.14",
           "QuestPDF": "2026.5.0",
@@ -15,6 +16,14 @@
         },
         "runtime": {
           "PdfOrganizer.dll": {}
+        }
+      },
+      "AspNetCore.SassCompiler/1.99.0": {
+        "runtime": {
+          "lib/net6.0/AspNetCore.SassCompiler.dll": {
+            "assemblyVersion": "1.99.0.0",
+            "fileVersion": "1.99.0.0"
+          }
         }
       },
       "Microsoft.AspNetCore.OpenApi/10.0.2": {
@@ -232,6 +241,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNetCore.SassCompiler/1.99.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a1cIh5KPiZoZ9lVqKLVX/koskE6LAiIB61sbh6mWW3R2mJanzziatiSHk+fd+leu2XGNdaTfy9VG5k8F6VhyKA==",
+      "path": "aspnetcore.sasscompiler/1.99.0",
+      "hashPath": "aspnetcore.sasscompiler.1.99.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/10.0.2": {
       "type": "package",
