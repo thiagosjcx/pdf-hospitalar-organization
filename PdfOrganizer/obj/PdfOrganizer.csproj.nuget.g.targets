@@ -4,5 +4,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.server\10.0.0\build\Microsoft.Extensions.ApiDescription.Server.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.server\10.0.0\build\Microsoft.Extensions.ApiDescription.Server.targets')" />
     <Import Project="$(NuGetPackageRoot)questpdf\2026.5.0\buildTransitive\QuestPDF.targets" Condition="Exists('$(NuGetPackageRoot)questpdf\2026.5.0\buildTransitive\QuestPDF.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.2\build\Microsoft.AspNetCore.OpenApi.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.2\build\Microsoft.AspNetCore.OpenApi.targets')" />
+    <Import Project="$(NuGetPackageRoot)aspnetcore.sasscompiler\1.99.0\build\AspNetCore.SassCompiler.targets" Condition="Exists('$(NuGetPackageRoot)aspnetcore.sasscompiler\1.99.0\build\AspNetCore.SassCompiler.targets')" />
   </ImportGroup>
 </Project>

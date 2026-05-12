@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "AspNetCore.SassCompiler/1.99.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/AspNetCore.SassCompiler.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/AspNetCore.SassCompiler.dll": {}
+        },
+        "build": {
+          "build/AspNetCore.SassCompiler.props": {},
+          "build/AspNetCore.SassCompiler.targets": {}
+        }
+      },
       "Microsoft.AspNetCore.OpenApi/10.0.2": {
         "type": "package",
         "dependencies": {
@@ -272,6 +285,43 @@
     }
   },
   "libraries": {
+    "AspNetCore.SassCompiler/1.99.0": {
+      "sha512": "a1cIh5KPiZoZ9lVqKLVX/koskE6LAiIB61sbh6mWW3R2mJanzziatiSHk+fd+leu2XGNdaTfy9VG5k8F6VhyKA==",
+      "type": "package",
+      "path": "aspnetcore.sasscompiler/1.99.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "aspnetcore.sasscompiler.1.99.0.nupkg.sha512",
+        "aspnetcore.sasscompiler.nuspec",
+        "build/AspNetCore.SassCompiler.props",
+        "build/AspNetCore.SassCompiler.targets",
+        "lib/net6.0/AspNetCore.SassCompiler.dll",
+        "lib/netstandard2.0/AspNetCore.SassCompiler.Tasks.dll",
+        "logo.png",
+        "runtimes/linux-arm64/sass",
+        "runtimes/linux-arm64/src/LICENSE",
+        "runtimes/linux-arm64/src/dart",
+        "runtimes/linux-arm64/src/sass.snapshot",
+        "runtimes/linux-x64/sass",
+        "runtimes/linux-x64/src/LICENSE",
+        "runtimes/linux-x64/src/dart",
+        "runtimes/linux-x64/src/sass.snapshot",
+        "runtimes/osx-arm64/sass",
+        "runtimes/osx-arm64/src/LICENSE",
+        "runtimes/osx-arm64/src/dart",
+        "runtimes/osx-arm64/src/sass.snapshot",
+        "runtimes/osx-x64/sass",
+        "runtimes/osx-x64/src/LICENSE",
+        "runtimes/osx-x64/src/dart",
+        "runtimes/osx-x64/src/sass.snapshot",
+        "runtimes/win-x64/sass.bat",
+        "runtimes/win-x64/src/LICENSE",
+        "runtimes/win-x64/src/dart.exe",
+        "runtimes/win-x64/src/sass.snapshot"
+      ]
+    },
     "Microsoft.AspNetCore.OpenApi/10.0.2": {
       "sha512": "YuEjUNpsoZLs0I5ONt013Z+Udsz3f9sPUh1Xm59LN7+/Z8oVG/swCUYLBbANtfreiunWnoT2uk+5kst4s2jr3Q==",
       "type": "package",
@@ -852,6 +902,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AspNetCore.SassCompiler >= 1.99.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.2",
       "PdfPig >= 0.1.14",
       "QuestPDF >= 2026.5.0",
@@ -908,6 +959,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "AspNetCore.SassCompiler": {
+            "target": "Package",
+            "version": "[1.99.0, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[10.0.2, )"
