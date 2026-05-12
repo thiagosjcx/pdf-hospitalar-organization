@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "HfnfU657ZkI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pc\\Documents\\repos\\PDF organization\\PDF-organization\\PdfOrganizer\\PdfOrganizer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pc\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.2\\microsoft.aspnetcore.openapi.10.0.2.nupkg.sha512",
+    "C:\\Users\\Pc\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\Pc\\.nuget\\packages\\questpdf\\2026.5.0\\questpdf.2026.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
