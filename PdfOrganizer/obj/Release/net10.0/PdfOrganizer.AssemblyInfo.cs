@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PdfOrganizer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3b79c38ce4cfb1339d739737b94c712ff378da8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f4948338ca22f656f44221207d34378bb67fe94")]
 [assembly: System.Reflection.AssemblyProductAttribute("PdfOrganizer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PdfOrganizer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
