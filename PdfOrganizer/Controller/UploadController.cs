@@ -4,16 +4,21 @@ using PdfOrganizer.Services;
 namespace PdfOrganizer.Controllers;
 
 [ApiController]
-public class UploadController : ControllerBase {
+[Route("upload")]
+public class UploadController : ControllerBase
+{
     private readonly PdfService _pdfService;
 
-    public UploadController(PdfService pdfService) {
+    public UploadController(PdfService pdfService)
+    {
         _pdfService = pdfService;
     }
 
-    [HttpPost("upload")]
-    public async Task<IActionResult> Upload(IFormFile file) {
-        if (file == null || file.Length == 0) {
+    [HttpPost]
+    public async Task<IActionResult> Upload(IFormFile file)
+    {
+        if (file == null || file.Length == 0)
+        {
             return BadRequest("Arquivo inválido");
         }
 
@@ -22,7 +27,8 @@ public class UploadController : ControllerBase {
             file.FileName
         );
 
-        using (var stream = new FileStream(inputPath, FileMode.Create)) {
+        using (var stream = new FileStream(inputPath, FileMode.Create))
+        {
             await file.CopyToAsync(stream);
         }
 

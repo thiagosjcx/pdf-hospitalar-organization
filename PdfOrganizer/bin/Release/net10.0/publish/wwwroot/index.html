@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Organizer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <div class="topbar-menu" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="topbar-badge">
+      <i class="ti ti-device-desktop"></i>
+      Sistema Local
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="hero">
+      <div class="hero-icon"><i class="ti ti-file-text"></i></div>
+      <div class="hero-text">
+        <h1>Organizador de PDF</h1>
+        <p>Envie seu PDF e receba uma versão organizada em ordem alfabética.</p>
+      </div>
+    </div>
+
+    <div class="content-grid">
+
+      <div class="card">
+        <input type="file" id="pdfFile" accept="application/pdf">
+
+        <div class="drop-zone" id="dropZone">
+          <i class="ti ti-cloud-upload"></i>
+          <p class="drop-zone-title">Arraste e solte seu arquivo PDF aqui</p>
+          <p class="drop-zone-or">ou</p>
+          <button class="btn" id="selectBtn">Selecionar arquivo</button>
+        </div>
+
+        <div class="file-pill" id="filePill">
+          <i class="ti ti-file-type-pdf"></i>
+          <span id="fileName"></span>
+        </div>
+
+        <div class="hint">
+          <i class="ti ti-info-circle"></i>
+          Apenas arquivos PDF são aceitos. Tamanho máximo: 50MB
+        </div>
+
+        <button class="btn btn-full" id="uploadBtn" disabled>
+          <i class="ti ti-sort-ascending-letters"></i>
+          Organizar PDF
+        </button>
+
+        <div class="status" id="status"></div>
+      </div>
+
+      <div class="card">
+        <p class="steps-title">Como funciona</p>
+        <div class="steps-line"></div>
+        <div class="steps-list">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>Envie seu PDF</h3>
+              <p>Arraste ou selecione o arquivo PDF que deseja organizar.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>Processamos o arquivo</h3>
+              <p>Extraímos o conteúdo e organizamos em ordem alfabética.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>Baixe o PDF organizado</h3>
+              <p>Faça o download do novo PDF com os itens organizados.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <section>
+      <h2 class="features-title">Recursos</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon purple"><i class="ti ti-file-text"></i></div>
+          <h3>Ordenação Alfabética</h3>
+          <p>Organiza os itens em ordem alfabética de forma inteligente.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green"><i class="ti ti-shield-check"></i></div>
+          <h3>Seguro e Local</h3>
+          <p>Seus arquivos não saem do seu computador. Totalmente seguro!</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon yellow"><i class="ti ti-bolt"></i></div>
+          <h3>Rápido</h3>
+          <p>Processamento rápido e eficiente mesmo para arquivos grandes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon orange"><i class="ti ti-file-description"></i></div>
+          <h3>Fácil de Usar</h3>
+          <p>Interface simples e intuitiva para facilitar o seu dia a dia.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© 2025 PdfOrganizer · Todos os direitos reservados</span>
+    <span>Versão 1.0.0</span>
+  </footer>
+
+</div>
+<script>
+  const fileInput  = document.getElementById('pdfFile');
+  const dropZone   = document.getElementById('dropZone');
+  const selectBtn  = document.getElementById('selectBtn');
+  const uploadBtn  = document.getElementById('uploadBtn');
+  const filePill   = document.getElementById('filePill');
+  const fileNameEl = document.getElementById('fileName');
+  const statusEl   = document.getElementById('status');
+
+  selectBtn.addEventListener('click', () => fileInput.click());
+
+  dropZone.addEventListener('click', e => { if (e.target !== selectBtn) fileInput.click(); });
+  dropZone.addEventListener('dragover',  e => { e.preventDefault(); dropZone.classList.add('active'); });
+  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('active'));
+  dropZone.addEventListener('drop', e => {
+    e.preventDefault();
+    dropZone.classList.remove('active');
+    setFile(e.dataTransfer.files[0]);
+  });
+
+  fileInput.addEventListener('change', () => setFile(fileInput.files[0]));
+
+  function setFile(file) {
+    if (!file || file.type !== 'application/pdf') return;
+    fileNameEl.textContent = file.name;
+    filePill.classList.add('visible');
+    uploadBtn.disabled = false;
+  }
+
+  function setStatus(type, icon, msg) {
+    statusEl.className = 'status ' + type;
+    statusEl.innerHTML = `<i class="ti ${icon}${type === 'loading' ? ' spin' : ''}"></i> ${msg}`;
+  }
+
+  uploadBtn.addEventListener('click', async () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+    uploadBtn.disabled = true;
+    setStatus('loading', 'ti-loader-2', 'Processando PDF...');
+    const formData = new FormData();
+    formData.append('file', file);
+    try {
+      const res = await fetch('/api/pdf/organizar', { method: 'POST', body: formData });
+      if (!res.ok) throw new Error();
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'resultado_organizado.pdf'; a.click();
+      URL.revokeObjectURL(url);
+      setStatus('ok', 'ti-circle-check', 'PDF organizado e baixado com sucesso!');
+    } catch {
+      setStatus('err', 'ti-alert-circle', 'Erro ao processar o PDF. Tente novamente.');
+    } finally {
+      uploadBtn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

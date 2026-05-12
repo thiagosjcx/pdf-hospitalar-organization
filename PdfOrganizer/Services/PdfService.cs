@@ -16,35 +16,27 @@ public class PdfService
         {
             foreach (var page in document.GetPages())
             {
-                var texto = page.Text;
+                // Extract lines by grouping words with similar Y positions
+                var words = page.GetWords()
+                    .GroupBy(w => Math.Round(w.BoundingBox.Bottom, 0))
+                    .OrderByDescending(g => g.Key);
 
-                var split = texto.Split('\n');
-
-                foreach (var linha in split)
+                foreach (var lineGroup in words)
                 {
-                    var limpa = linha.Trim();
+                    var linha = string.Join(" ", lineGroup
+                        .OrderBy(w => w.BoundingBox.Left)
+                        .Select(w => w.Text))
+                        .Trim();
 
-                    if (string.IsNullOrWhiteSpace(limpa))
-                        continue;
+                    if (string.IsNullOrWhiteSpace(linha)) continue;
+                    if (linha.Contains("Impresso em")) continue;
+                    if (linha.Contains("Página")) continue;
+                    if (linha.Contains("Não Atendidos")) continue;
 
-                    if (limpa.Contains("Impresso em"))
-                        continue;
-
-                    if (limpa.Contains("Página"))
-                        continue;
-
-                    if (limpa.Contains("Não Atendidos"))
-                        continue;
-
-                    bool produtoValido = Regex.IsMatch(
-                        limpa,
-                        @"^\d+\.\d+"
-                    );
+                    bool produtoValido = Regex.IsMatch(linha, @"^\d+\.\d+");
 
                     if (produtoValido)
-                    {
-                        linhas.Add(limpa);
-                    }
+                        linhas.Add(linha);
                 }
             }
         }

@@ -17,7 +17,7 @@ async function uploadPDF() {
 
     try {
 
-        const response = await fetch("/upload", {
+        const response = await fetch("http://localhost:5175/upload", {
             method: "POST",
             body: formData
         });

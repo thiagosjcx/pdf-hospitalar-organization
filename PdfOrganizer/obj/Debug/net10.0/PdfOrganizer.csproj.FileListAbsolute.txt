@@ -85,7 +85,6 @@ C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\D
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\PdfOrganizer.pdb
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\PdfOrganizer.genruntimeconfig.cache
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\ref\PdfOrganizer.dll
-C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\bin\Debug\net10.0\runtimes\win-x64\src\dart.exe
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\bin\Debug\net10.0\runtimes\win-x64\src\sass.snapshot
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\bin\Debug\net10.0\runtimes\linux-x64\src\dart
@@ -97,5 +96,6 @@ C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\bin\D
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\bin\Debug\net10.0\runtimes\osx-arm64\src\dart
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\bin\Debug\net10.0\runtimes\osx-arm64\src\sass.snapshot
 C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\bin\Debug\net10.0\AspNetCore.SassCompiler.dll
-C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\compressed\0uwfbzf4oj-{0}-2glzik1mt9-2glzik1mt9.gz
-C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\compressed\z1x0bish9j-{0}-f6biskagfh-f6biskagfh.gz
+C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\compressed\jc8skbs686-{0}-iazf4a2cna-iazf4a2cna.gz
+C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\compressed\z1x0bish9j-{0}-e3cqcopdpb-e3cqcopdpb.gz
+C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\obj\Debug\net10.0\compressed\0uwfbzf4oj-{0}-4e1haxa568-4e1haxa568.gz

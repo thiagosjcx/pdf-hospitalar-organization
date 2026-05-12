@@ -1,5 +1,0 @@
-wwwroot\style.scss
-wwwroot\script.js
-wwwroot\index.html
-C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\wwwroot\script.js
-C:\Users\Pc\Documents\repos\PDF organization\PDF-organization\PdfOrganizer\wwwroot\index.html
