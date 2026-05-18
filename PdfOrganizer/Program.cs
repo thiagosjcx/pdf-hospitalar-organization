@@ -1,6 +1,5 @@
 using PdfOrganizer.Services;
 using QuestPDF.Infrastructure;
-using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +17,4 @@ app.MapControllers();
 
 app.MapFallbackToFile("index.html");
 
-Process.Start(new ProcessStartInfo
-{
-    FileName = "http://localhost:5000",
-    UseShellExecute = true
-});
-
-app.Run("http://localhost:5000");
+app.Run();
